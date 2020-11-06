@@ -19,7 +19,7 @@ With these few lines of python codes, users can simplify the same. There are two
 IT > containing code and SQL queries, which IT can use and modify according to user needs.
 User > containing a simple GUI, which can read the default queries and custom queries as the IT deploys, extract the data directly to Excel Files which users can view at a click of a button.
 
-#Files
+# Files
 
 [Technicals file](Technicals.md) contains the basic information and the underlying code which enables Python to extract data from Tally and put it in Excel. 
 
