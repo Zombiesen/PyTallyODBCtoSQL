@@ -1,10 +1,11 @@
 Technically, following is all that is needed in the code.
 
-#1. Connect to the Tally's ODBC interface.
-#2. Definition and execution of queries.
-#3. Extraction of data to excel files.
+#### 1. Connect to the Tally's ODBC interface.
+#### 2. Definition and execution of queries.
+#### 3. Extraction of data to excel files.
 
-##Point 1.
+
+## 1 Connect to Tally's ODBC interface.
 Connection to Tally's ODBC is done through pyodbc library.
 Code is just two lines. The 'DSN=' is default for 64bit installation of Tally with default ODBC driver port of 9000. IT can change it as required. But default should work just fine.
 
@@ -12,7 +13,9 @@ Code is just two lines. The 'DSN=' is default for 64bit installation of Tally wi
     
     cnxn = pyodbc.connect('DSN=TallyODBC64_9000;SERVER=({local});DRIVER=Tally ODBC DRIVER64;PORT=9000')
 
-##Point 2.
+.
+
+## 2 Definition and execution of queries.
 Definition and execution of queries.
 Following are some of the standard SQL queries with most used fields. I will keep them updating as more are needed. They are simply stores in a dict object, which anyone can modify and it will get updated.
 
@@ -37,7 +40,7 @@ Execution of queries is extremely simple with Pandas. Following will automatical
     df = pd.read_sql_query(sql_string,con=cnxn)
     
  
-##Point 3
+## 3 Extraction of data to excel files
 Extraction of Data to excel is a one line code. Pandas has lots of options which one can use (eg. create an writer object, preformat the dataframe and so forth.) But this is the simplest way of doing it. After this line of code, one can also call the filename and open it in Excel or other spreadsheet program.
     
     df.to_excel(filename+".xlsx")
