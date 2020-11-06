@@ -19,13 +19,14 @@ With these few lines of python codes, users can simplify the same. There are two
 IT > containing code and SQL queries, which IT can use and modify according to user needs.
 User > containing a simple GUI, which can read the default queries and custom queries as the IT deploys, extract the data directly to Excel Files which users can view at a click of a button.
 
-Some background on the documentation.
+#Files
 
 [Technicals file](Technicals.md) contains the basic information and the underlying code which enables Python to extract data from Tally and put it in Excel. 
 
 [GUI file](GUI.md) contains the information on the graphical user interface.
 
 Python Files
+
 [Tally Core](tally_core.py) contains the core 4 lines of code which connects with tally and extract to excel.
 [Tally Custom SQL](tally_customSQL.py) contains the code for importing text file custom_sql.txt into dictionary which will be later loaded onto the GUI file.
 [Tally GUI](tally_gui.py) is the main file. run 'python tally_gui.py' in the folder which will trigger and set everything in motion.
